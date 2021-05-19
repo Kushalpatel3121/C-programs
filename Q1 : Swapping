@@ -1,0 +1,14 @@
+//swapping two numbers without temporary variable
+#include<stdio.h>
+int main()
+{
+    int num1 , num2;
+    printf("Enter two numbers, num 1 and num 2 respectively : ");
+    scanf("%d %d",&num1,&num2);
+    printf("Values before swap : \nnum 1 = %d\nnum 2 = %d\n",num1,num2);
+    num1 = num1 * num2;
+    num2 = num1 / num2;
+    num1 = num1 / num2;
+    printf("Values after swap : \nnum 1 = %d\nnum 2 = %d",num1,num2);
+    return 0;
+}
