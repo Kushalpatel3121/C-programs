@@ -1,0 +1,25 @@
+//write a program to find the sum of digits of a number using recursion
+#include <stdio.h>
+int sum(int);
+int main()
+{
+    int num, s;
+    printf("Enter a number : ");
+    scanf("%d", &num);
+    s = sum(num);
+    printf("The sum is : %d", s);
+    return 0;
+}
+
+int sum(int num)
+{
+    if (num > 0)
+    {
+        int s = 0,i;
+        i = num % 10;
+        num/=10;
+        s = sum(num);
+        s = s + i;
+        return s;
+    }
+}
